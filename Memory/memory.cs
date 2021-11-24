@@ -330,8 +330,15 @@ namespace Memory
             // remove spaces
             if (theCode.Contains(" "))
                 theCode = theCode.Replace(" ", String.Empty);
-            
-            if (!theCode.Contains("+") && !theCode.Contains(",")) return new UIntPtr(Convert.ToUInt32(theCode, 16));
+
+            try
+            {
+                if (!theCode.Contains("+") && !theCode.Contains(",")) return new UIntPtr(Convert.ToUInt32(theCode, 16));
+            }
+            catch (OverflowException)
+            {
+                return (UIntPtr)0;
+            }
 
             string newOffsets = theCode;
 
