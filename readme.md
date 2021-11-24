@@ -1,3 +1,9 @@
+### Fork Notes
+
+This is my (Luminar Light's) fork, with edits for my own purposes. If you see any useful changes, feel free to use them yourself.
+
+---
+
 ## DESCRIPTION
 Create great PC game cheat trainers with ease!
 
