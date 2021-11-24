@@ -111,7 +111,7 @@ namespace Memory
 
                 mProc.MainModule = mProc.Process.MainModule;
 
-                GetModules();
+                //GetModules();
 
                 Debug.WriteLine("Process #" + mProc.Process + " is now open.");
 
@@ -330,7 +330,7 @@ namespace Memory
             // remove spaces
             if (theCode.Contains(" "))
                 theCode = theCode.Replace(" ", String.Empty);
-
+            
             if (!theCode.Contains("+") && !theCode.Contains(",")) return new UIntPtr(Convert.ToUInt32(theCode, 16));
 
             string newOffsets = theCode;
