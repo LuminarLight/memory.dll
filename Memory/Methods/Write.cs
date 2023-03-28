@@ -111,6 +111,11 @@ namespace Memory
                 memory = BitConverter.GetBytes(Convert.ToInt32(write));
                 size = 4;
             }
+            else if (type.ToLower() == "inthex")
+            {
+                memory = BitConverter.GetBytes(Convert.ToInt32(write, 16));
+                size = 4;
+            }
             else if (type.ToLower() == "byte")
             {
                 memory = new byte[1];
